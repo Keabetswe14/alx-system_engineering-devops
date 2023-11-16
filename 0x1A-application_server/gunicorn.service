@@ -15,3 +15,10 @@ Restart=always
 # Redirect standard output to syslog
 StandardOutput=append:/tmp/airbnb-access.log
 # Redirect standard error to syslog
+StandardError=append:/tmp/airbnb-error.log
+# Identifier for syslog messages
+SyslogIdentifier=gunicorn
+
+[Install]
+# Enable the service for multi-user.target
+WantedBy=multi-user.target
